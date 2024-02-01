@@ -2,7 +2,7 @@
 
 # Presentation :
 
-**C'est quoi ?** Ce projet est lui meme un modèle  qui consiste à trouver le modèle ML de classification adapté qui permet de categoriser les transactions bancaires frauduleuse en non frauduleuse d'un dataset donné.
+Ce projet est lui meme un modèle  qui consiste à trouver le modèle ML de classification adapté qui permet de categoriser les transactions bancaires frauduleuse en non frauduleuse d'un dataset donné.
 
 # Reperoire :
 
@@ -40,43 +40,16 @@ Composé des variables suivantes:
 - ‘isFraud’ 1 si la transaction est frauduleuse, sinon 0.
 - ‘isFraggedFraud’ 1 si la transaction a été signalée frauduleuse, sinon 0.
 
-# Questions & Reponses :
-
-**Quelle rapport entre modèle et l'algorithme ?** Un modèle contient son propre algorithme
-**Ou se trouve les modèles à comparer ?** déjà prets dans la MLLib (e.g algorithmes : la foret aléatoire,le classificateur GBT, algo de regression logistique, calassificateur Naive bayes,  le gradient boost ... )
-
-**Comment fonctionne ce modèle ?** Il divise le dataset fournit en echantillon de test 20% et de verfication 80%, exécute les modèles sur les 20%, fait des prédiction pour les verifie sur les 80%, le modèle avec le moins d'érreur est le meilleur.
-
-**Comment nos modèle reconnaissent une fraude ?** grace aux caracteristiques inhabituelles déjà predefinies (type isFraud) : 
-- montants de virements trop elevés et suspicieux
-- retrait/dépot bizarres dans des endroits inhabituels
--  debit ...
-
-**Quelles techniques ?** utilise :
-- MLLib : lib de apache Spark qui contient les differents modèles
-- Apache Spark : fournit une API = envirement d'éxécution pour accéler les differents modèles MLLib  
-- Python : est le langage de programmation utilisé dans ce projet pour coder les differents algorithmes
-- MatplotLib & Pandas : lib de python pour créer mes visualisations dans l'étape de visualisation des données.
-
-
-**Quelles étapes à suivre ?** 
-- Exploration Data Analysis
-- Pré-traitement des données
-- Developpement de l'application
-- Evaluation des prediction
-- Resultats
-
-
 # Méthode suivie :
 
-**1- EDA: Exploration Data Analysis :** 
+**1- EDA (Exploration Data Analysis) :** 
 étude statistique descriptive et visualisation préliminaire des données pour déterminer les mesures de base du dataset (moyenne, min, max ...) % de fraude dans notre daechantillon de test puis d'étudier la correlation entre les variables pour detecter s'il ya correlation (==> redondance ==> mauvais modele)
 Remarque : dans notre cas, il y'a un déséquilibre ==> résultats seront donc peu précis
 **2- Pré-traitement des données :** : verification des données manquantes (e.g colonne), puis transformation des données en vecteurs numeriques (e.g String --> int) pySpark traite les val num avec les fonctions  ===> On utilise Spark pour faire vite
 **3- Developpement de l'application :** ici on va deviser le jeu de données (20% pour le test, 80% pour le controle qualité) on entraine les differents modèles sur le test puis on fait des prédictions et on fait nos évaluation sur les 80% réstants
 **4- Evaluation des predictions :** on applique les métriques d'évaluation (Recall, ROC, AUC ... ) pour évaluer la fiabilité des modeles et calculer le % d'erreur ainsi trancher sur le meilleur modèle à prendre.
 
-# Resultats : 
+# Resultats :
+ 
 Le GRadient Boost Classifier est plus performant que les autres modèles si on considère toutes les ́metriques de l'evaluation.
-
 
