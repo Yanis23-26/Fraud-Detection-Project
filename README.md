@@ -1,4 +1,4 @@
-### PROJET : Détection de la fraude bancaire
+### PROJET : Détection de la fraude bancaire : Yanis GHERDANE
 
 # Presentation :
 
@@ -50,6 +50,6 @@ Remarque : dans notre cas, il y'a un déséquilibre ==> résultats seront donc p
 **4- Evaluation des predictions :** on applique les métriques d'évaluation (Recall, ROC, AUC ... ) pour évaluer la fiabilité des modeles et calculer le % d'erreur ainsi trancher sur le meilleur modèle à prendre.
 
 # Resultats :
- 
+
 Le GRadient Boost Classifier est plus performant que les autres modèles si on considère toutes les ́metriques de l'evaluation.
 
