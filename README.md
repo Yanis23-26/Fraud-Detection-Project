@@ -1,4 +1,4 @@
-### PROJET : Détection de la fraude bancaire : Yanis GHERDANE
+### PROJET : Détection de la fraude bancaire :
 
 # Presentation :
 
