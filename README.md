@@ -2,7 +2,7 @@
 
 # Presentation :
 
-Ce projet est lui meme un modèle  qui consiste à trouver le modèle ML de classification adapté qui permet de categoriser les transactions bancaires frauduleuse en non frauduleuse d'un dataset donné.
+Ce projet consiste à trouver le modèle ML de classification adapté qui permet de categoriser les transactions bancaires frauduleuse en non frauduleuse d'un dataset donné.
 
 # Reperoire :
 
